@@ -3,7 +3,6 @@ package com.sapient.parkinglot.factories;
 import com.sapient.parkinglot.models.SimpleVehicle;
 import com.sapient.parkinglot.models.Vehicle;
 
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class VehicleFactory {

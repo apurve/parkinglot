@@ -11,7 +11,7 @@ public class ParkingSpotTest {
 
     @Before
     public void initializeParkingSpot() {
-        spot = new ParkingSpot("1-1");
+        spot = new ParkingSpot(1, 1);
 
     }
 

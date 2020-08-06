@@ -1,10 +1,10 @@
 package com.sapient.parkinglot;
 
-import com.sapient.parkinglot.models.ParkingFloor;
 import com.sapient.parkinglot.models.ParkingLot;
+import com.sapient.parkinglot.models.ParkingSpot;
+import com.sapient.parkinglot.util.ParkingLotComparator;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.PriorityQueue;
 
 public class ParkingLotBuilder {
 
@@ -27,12 +27,12 @@ public class ParkingLotBuilder {
     }
 
     public ParkingLot buildSimpleParkingLotForTesting() {
-        List<ParkingFloor> floors = new ArrayList<>(this.floors);
-        for(int i = 0; i < this.floors; i++) {
-            ParkingFloor floor = new ParkingFloor(i, spotsPerFloor);
-            floors.add(floor);
-        }
-        return ParkingLot.getInstance(name, floors);
+        PriorityQueue<ParkingSpot> parkingSpots = new PriorityQueue<>(new ParkingLotComparator());
+        for(int i = 0; i < floors; i++)
+            for(int j = 0; j < spotsPerFloor; j++)
+                parkingSpots.add(new ParkingSpot(i, j));
+
+        return ParkingLot.getInstance(name, parkingSpots);
     }
 
 }

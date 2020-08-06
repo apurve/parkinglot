@@ -24,7 +24,7 @@ public class SimpleParkingTicket implements ParkingTicket {
     public String toString() {
         return "SimpleParkingTicket{" +
                 "licenseNumber='" + licenseNumber + '\'' +
-                ", spotNumber='" + spotNumber + '\'' +
+                ", spotNumber (f-p)='" + spotNumber + '\'' +
                 '}';
     }
 }

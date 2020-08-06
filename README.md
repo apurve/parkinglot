@@ -20,7 +20,7 @@ Class Diagram :
 1. ParkingLot : The central part of the organization for which this software has been designed. It has a attribute ‘Name’ to distinguish it from any other parking lots.
 2. ParkingFloor : The parking lot will have many parking floors.
 3. ParkingSpot : Each parking floor will have many parking spots.
-4. Parking ticket : This class will encapsulate a parking ticket. Customers will take a ticket when they enter the parking lot.
+4. Parking Ticket : This class will encapsulate a parking ticket. Customers will take a ticket when they enter the parking lot.
 5. Vehicle : Vehicles will be parked in the parking spots.
 
 The project uses following libraries:

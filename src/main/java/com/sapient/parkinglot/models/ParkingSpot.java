@@ -4,11 +4,13 @@ import java.time.LocalDateTime;
 
 public class ParkingSpot {
 
-    private String number;
+    private int number;
+    private int floor;
     private Vehicle vehicle;
     private LocalDateTime vacatedOn;
 
-    public ParkingSpot(String number) {
+    public ParkingSpot(int floor, int number) {
+        this.floor = floor;
         this.number = number;
         this.vacatedOn = LocalDateTime.now();
     }
@@ -34,12 +36,31 @@ public class ParkingSpot {
         return false;
     }
 
-    public String getNumber() {
+    @Override
+    public String toString() {
+        return "ParkingSpot{" +
+                "number=" + number +
+                ", floor=" + floor +
+                ", vehicle=" + vehicle.getLicenseNumber() +
+                ", vacatedOn=" + vacatedOn +
+                '}';
+    }
+
+    public String getParkingNumber() {
+        return floor+"-"+number;
+    }
+    public Integer getNumber() {
         return number;
+    }
+
+    public Integer getFloor() {
+        return floor;
     }
 
     public LocalDateTime getVacatedOn() {
         return vacatedOn;
     }
+
+
 
 }
