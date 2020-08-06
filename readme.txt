@@ -2,20 +2,22 @@
 
 Requirements :
 1. The parking lot should have multiple floors where customers can park their cars.
-2. The parking lot should have multiple entry and exit points.
+2. The parking has multiple entry and exit points.
 3. Customers can collect a parking ticket from the entry points.
 4. The system should not allow more vehicles than the maximum capacity of the parking lot.
 5. Each parking floor will have many parking spots.
+6. Parking spots should be allocated top to bottom.
+7. When multiple spots are available at same floor then the slot vacated first needs to be allocated first.
 
 The main Actors are :
 1. Customer - All customers can get a parking ticket.
 2. System - assigns and removes a vehicle from a parking spot.
 
 Use Case of the system :
-1. Take ticket : To provide customers with a new parking ticket when entering the parking lot.
+1. Take ticket : To provide customers with a new parking ticket when entering the parking lot. Customers can enter from any point so same spot should not be allocated to different customers.
 
 Class Diagram :
-1. ParkingLot : The central part of the organization for which this software has been designed. It has attributes like ‘Name’ to distinguish it from any other parking lots and ‘Address’ to define its location.
+1. ParkingLot : The central part of the organization for which this software has been designed. It has a attribute ‘Name’ to distinguish it from any other parking lots.
 2. ParkingFloor : The parking lot will have many parking floors.
 3. ParkingSpot : Each parking floor will have many parking spots.
 4. Parking ticket : This class will encapsulate a parking ticket. Customers will take a ticket when they enter the parking lot.
